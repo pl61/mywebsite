@@ -4,9 +4,7 @@ const App = () => {
 
   return (
     <div>
-      <div>
-        Hello World
-      </div>
+      Hello World
     </div>
   );
 };

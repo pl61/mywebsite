@@ -3,7 +3,29 @@
     <title>React App</title>
   </head>
   <body>
+    <canvas id="background">
+      Sorry, your browser doesn't support the &lt;canvas&gt; element.
+    </canvas>
     <div id="app"></div>
+    <script>
+      const canvas = document.getElementById('background');
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      ctx.fillStyle = "#464866";
+      ctx.fillRect(0, 0, 100, 100);
+
+      ctx.fillStyle = "#aaabb8";
+      ctx.fillRect(150, 0, 100, 100);
+
+      ctx.fillStyle = "#2e9cca";
+      ctx.fillRect(300, 0, 100, 100);
+
+      ctx.fillStyle = "#29648a";
+      ctx.fillRect(450, 0, 100, 100);
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>
