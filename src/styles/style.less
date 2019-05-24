@@ -1,15 +1,50 @@
 @import "../styles/bootstrap.min.css";
 
+@color1: blue;
+@color2: orange;
+
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  background-color: @color1;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #app {
-  position: absolute;
-  color: white;
+  color: @color2;
+  width: 70%;
+  height: 70%;
+  max-width: 1024px;
 }
 
-canvas {
-  position: absolute;
-  background-color: #25274d;
+.nav-bar {
+  border-bottom: 2px solid @color2;
+  padding-left: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 1rem 4rem;
+}
+
+.nav-active {
+  font-weight: bold;
+  color: @color1;
+  background-color: @color2;
+}
+
+.content {
+  padding-left: 1rem;
 }

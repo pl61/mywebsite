@@ -1,10 +1,13 @@
 import React from 'react';
+import Navbar from './Navbar.jsx';
+import Content from './Content.jsx';
 
 const App = () => {
 
   return (
     <div>
-      Hello World
+      <Navbar/>
+      <Content/>
     </div>
   );
 };

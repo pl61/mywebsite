@@ -383,7 +383,8 @@
   },
   "css": [
     "grid.less",
-    "responsive-utilities.less"
+    "responsive-utilities.less",
+    "component-animations.less"
   ],
   "js": []
 }
