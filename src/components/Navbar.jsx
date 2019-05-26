@@ -1,15 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const Navbar = () => {
-  const [activeItem, setActiveItem] = useState('about-item');
-
-  return (
-    <div className='nav-bar'>
-      <div id="about-item" className={'nav-item' + (activeItem === 'about-item' ? ' nav-active' : '')} onClick={(e) => setActiveItem(e.target.id)}>About</div>
-      <div id="skills-item" className={'nav-item' + (activeItem === 'skills-item' ? ' nav-active' : '')} onClick={(e) => setActiveItem(e.target.id)}>Skills</div>
-      <div id="apps-item" className={'nav-item' + (activeItem === 'apps-item' ? ' nav-active' : '')} onClick={(e) => setActiveItem(e.target.id)}>Apps</div>
-    </div>
-  );
-};
+const Navbar = ({ activeItem, setActiveItem }) => (
+  <div className='nav-bar'>
+    <div id="about-item" className={activeItem === 'about-item' ? ' nav-active' : 'nav-item'} onClick={(e) => setActiveItem(e.target.id)}>About</div>
+    <div id="skills-item" className={activeItem === 'skills-item' ? ' nav-active' : 'nav-item'} onClick={(e) => setActiveItem(e.target.id)}>Skills</div>
+    <div id="apps-item" className={activeItem === 'apps-item' ? ' nav-active' : 'nav-item'} onClick={(e) => setActiveItem(e.target.id)}>Apps</div>
+  </div>
+);
 
 export default Navbar;

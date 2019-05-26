@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Content = () => {
+const Content = ({ activeItem }) => {
 
   return (
     <div className='content'>
-
+      {activeItem}
     </div>
   );
 };

@@ -1,7 +1,30 @@
+
 @import "../styles/bootstrap.min.css";
 
-@color1: white;
-@color2: black;
+@color1: #f6f6f6;
+@color2: #000000;
+@color3: #d0d0d0;
+
+// mixins
+
+.transition {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav-item-shared {
+  .transition();
+
+  text-align: center;
+  display: inline-block;
+  width: 4.5rem;
+  padding: 1rem 2rem;
+  box-sizing: content-box;
+}
+
+// styles
 
 html {
   height: 100%;
@@ -29,22 +52,29 @@ body {
 }
 
 .nav-bar {
-  font-weight: bold;
-  border-bottom: 2px solid @color2;
-  padding-left: 1rem;
+  font-weight: 600;
+  padding: 0 2rem;
+  white-space: nowrap
 }
 
 .nav-item {
+  .nav-item-shared();
+
   cursor: pointer;
-  display: inline-block;
-  padding: 1rem 4rem;
+
+  &:hover {
+    background-color: @color3;
+  }
 }
 
 .nav-active {
+  .nav-item-shared();
+
   color: @color1;
   background-color: @color2;
 }
 
 .content {
-  padding-left: 1rem;
+  border-top: 2px solid @color2;
+  padding: 2rem;
 }
