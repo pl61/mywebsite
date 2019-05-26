@@ -4,6 +4,7 @@
 @color1: #f6f6f6;
 @color2: #000000;
 @color3: #d0d0d0;
+@color4: #ffffff;
 
 // mixins
 
@@ -32,7 +33,7 @@ html {
 
 body {
   height: 100%;
-  background-color: @color1;
+  background-color: @color4;
   position: relative;
   display: flex;
   align-items: center;
@@ -41,9 +42,17 @@ body {
 
 #app {
   color: @color2;
-  max-width: 1024px;
+  background-color: @color1;
+  padding: 1rem;
+
+  max-width: 800px;
+  min-width: 300px;
+  max-height: 800px;
+  min-height: 300px;
   width: 90%;
   height: 90%;
+
+  box-shadow: 1rem 1rem rgba(0,0,0,0.5);
 
   @media (min-width: 768px) {
     width: 70%;
@@ -53,8 +62,16 @@ body {
 
 .nav-bar {
   font-weight: 600;
-  padding: 0 2rem;
-  white-space: nowrap
+  padding: 0;
+  white-space: nowrap;
+
+  @media (min-width: 375px) {
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
 }
 
 .nav-item {
@@ -70,11 +87,17 @@ body {
 .nav-active {
   .nav-item-shared();
 
+  cursor: default;
+
   color: @color1;
   background-color: @color2;
 }
 
 .content {
   border-top: 2px solid @color2;
-  padding: 2rem;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
 }
