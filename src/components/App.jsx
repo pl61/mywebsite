@@ -11,23 +11,24 @@ const App = () => {
   const selectContent = (selected) => {
     if (selected === 'item-about') {
       return <About/>;
-    } else if (selected === 'item-skills') {
+    } if (selected === 'item-skills') {
       return <Skills/>;
-    } else if (selected === 'item-apps') {
+    } if (selected === 'item-apps') {
       return <Apps/>;
     }
-  }
+
+    return 'oh no';
+  };
 
   useEffect(() => {
     let delay = 0;
 
-    $('.feature').each(function() {
-
+    $('.feature').each(function () {
       setTimeout(() => {
-        $(this).addClass('load')
+        $(this).addClass('load');
       }, delay);
 
-      delay += 100
+      delay += 100;
     });
   });
 
