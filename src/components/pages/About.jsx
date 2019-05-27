@@ -13,9 +13,9 @@ const About = () => {
           <h3>Software Engineer</h3>
           <h4></h4>
           <div><img src={iconLocation}></img> Vancouver / Canada</div>
-          <div><img src={iconEmail}></img> <a href="mailto:peter.xh.liu@gmail.com">peter.xh.liu@gmail.com</a></div>
-          <div><img src={iconGithub}></img> <a href="github.com/pl61">github.com/pl61</a></div>
-          <div><img src={iconLinkedin}></img> <a href="linkedin.com/in/pl61">linkedin.com/in/pl61</a></div>
+          <div><img src={iconEmail}></img> <a href="mailto:peter.xh.liu@gmail.com" target="_blank">peter.xh.liu@gmail.com</a></div>
+          <div><img src={iconGithub}></img> <a href="https://github.com/pl61" target="_blank">github.com/pl61</a></div>
+          <div><img src={iconLinkedin}></img> <a href="https://linkedin.com/in/pl61" target="_blank">linkedin.com/in/pl61</a></div>
         </div>
         <div className="feature text-wrap">
           <p>Currently seeking new opportunities. Passionate about solving problems using my knowledge in coding and engineering. Experienced with full-stack web development using React, Bootstrap, Node, MySQL/MongoDB, Docker, and AWS.</p><br/>
