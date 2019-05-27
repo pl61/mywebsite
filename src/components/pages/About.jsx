@@ -17,7 +17,7 @@ const About = () => (
         <div><img src={iconLinkedin}></img> <a href="https://linkedin.com/in/pl61" target="_blank" rel="noreferrer noopener">linkedin.com/in/pl61</a></div>
       </div>
       <div className="feature text-wrap">
-        <p>Currently seeking new opportunities. Passionate about solving problems using my knowledge in coding and engineering. Experienced with full-stack web development using React, Bootstrap, Node, MySQL/MongoDB, Docker, and AWS.</p><br/>
+        <p>Currently seeking new opportunities. Passionate about solving problems using my knowledge in coding and engineering. Experienced with full-stack web development using <strong>React</strong>, <strong>Bootstrap</strong>, <strong>Node</strong>, <strong>MySQL</strong>, <strong>MongoDB</strong>, <strong>Docker</strong>, and <strong>AWS</strong>.</p><br/>
         <p>Outside of work I enjoy gaming, jogging, and an occasional round of golf. Based on my old Sun Run results I am exceptionally average for my age group.</p>
       </div>
     </div>
