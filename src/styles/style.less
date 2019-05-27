@@ -1,10 +1,10 @@
 
 @import "../styles/bootstrap.min.css";
 
-@color1: #f6f6f6;
-@color2: #000000;
-@color3: #d0d0d0;
-@color4: #e1e1e1;
+@background: #f2f2f2;
+@text: #313131;
+@color3: #f9f9f9;
+@hover: #d1d1d1;
 
 // mixins
 
@@ -33,30 +33,27 @@ html {
 
 body {
   height: 100%;
-  background-color: @color4;
+  background-color: @background;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #app {
-  color: @color2;
-  background-color: @color1;
+  color: @text;
   padding: 1rem;
 
-  max-width: 800px;
-  min-width: 300px;
-  max-height: 800px;
-  min-height: 300px;
-  width: 90%;
-  height: 90%;
+  margin: 1rem;
+  width: 768px;
+  height: 576px;
 
-  box-shadow: 1rem 1rem rgba(0,0,0,0.5);
+  @media (min-width: 800px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  @media (min-width: 768px) {
-    width: 70%;
-    height: 70%;
+  @media (min-height: 600px) {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
@@ -76,7 +73,7 @@ body {
   cursor: pointer;
 
   &:hover {
-    background-color: @color3;
+    background-color: @hover;
   }
 }
 
@@ -85,15 +82,24 @@ body {
 
   cursor: default;
 
-  color: @color1;
-  background-color: @color2;
+  color: @background;
+  background-color: @text;
 }
 
 .content {
-  border-top: 2px solid @color2;
+  border-top: 2px solid @text;
   padding: 1rem;
 
   @media (min-width: 768px) {
     padding: 1rem 2rem;
   }
+}
+
+.feature {
+  .transition();
+
+  box-shadow: 1rem 1rem rgba(0,0,0,0.5);
+  padding: 1rem;
+  width: fit-content;
+  background-color: @color3;
 }
