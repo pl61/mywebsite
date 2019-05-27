@@ -18,6 +18,10 @@ module.exports = {
           'less-loader', // compiles Less to CSS, using Node Sass by default
         ],
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "file-loader?name=/icons/[name].[ext]"
+      },
     ],
   },
   output: {

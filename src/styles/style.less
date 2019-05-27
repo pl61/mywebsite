@@ -1,18 +1,20 @@
 
 @import "../styles/bootstrap.min.css";
 
-@background: #f2f2f2;
+@background: #f1f1f1;
 @text: #313131;
-@color3: #f9f9f9;
+@app: #f2f2f2;
+@feature: #f1f1f1;
 @hover: #d1d1d1;
+@border: #d1d1d1;
 
 // mixins
 
 .transition {
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .nav-item-shared {
@@ -38,20 +40,36 @@ body {
   display: flex;
 }
 
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  widows: 20px;
+  height: 20px;
+}
+
 #app {
   color: @text;
+  background-color: @background;
+  border: 1px solid @border;
+  box-shadow: 1rem 1rem rgba(0,0,0,0.5);
   padding: 1rem;
-
   margin: 1rem;
   width: 768px;
-  height: 576px;
 
   @media (min-width: 800px) {
     margin-left: auto;
     margin-right: auto;
   }
 
-  @media (min-height: 600px) {
+  @media (min-height: 800px) {
     margin-top: auto;
     margin-bottom: auto;
   }
@@ -87,19 +105,27 @@ body {
 }
 
 .content {
-  border-top: 2px solid @text;
-  padding: 1rem;
+  .transition();
 
-  @media (min-width: 768px) {
-    padding: 1rem 2rem;
-  }
+  border-top: 2px solid @text;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .feature {
   .transition();
 
-  box-shadow: 1rem 1rem rgba(0,0,0,0.5);
+  border: 1px solid @border;
+  opacity: 0;
   padding: 1rem;
+  margin: 1rem;
   width: fit-content;
-  background-color: @color3;
+  box-shadow: 1rem 1rem rgba(0,0,0,0.5);
+  background-color: @feature;
+}
+
+.load {
+  opacity: 1;
 }
