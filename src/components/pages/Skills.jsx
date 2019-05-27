@@ -2,7 +2,7 @@ import React from 'react';
 
 const Skills = () => {
   return (
-    <div className="content">
+    <div className="skills">
       <div className="feature">
         <h3>Front-End</h3><br/>
         <ul>
@@ -27,6 +27,19 @@ const Skills = () => {
           <li>Docker</li>
           <li>AWS</li>
           <li>Heroku</li>
+        </ul>
+      </div>
+      <div className="feature">
+        <h3>Other</h3><br/>
+        <ul>
+          <li>Jest</li>
+          <li>Enzyme</li>
+          <li>Mocha</li>
+          <li>Chai</li>
+          <li>Git</li>
+          <li>Travis CI</li>
+          <li>Agile</li>
+          <li>Microservices</li>
         </ul>
       </div>
     </div>

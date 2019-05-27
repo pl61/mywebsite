@@ -6,14 +6,14 @@ import Skills from './pages/Skills.jsx';
 import Apps from './pages/Apps.jsx';
 
 const App = () => {
-  const [activeItem, setActiveItem] = useState('skills-item');
+  const [activeItem, setActiveItem] = useState('item-about');
 
   const selectContent = (selected) => {
-    if (selected === 'about-item') {
+    if (selected === 'item-about') {
       return <About/>;
-    } else if (selected === 'skills-item') {
+    } else if (selected === 'item-skills') {
       return <Skills/>;
-    } else if (selected === 'apps-item') {
+    } else if (selected === 'item-apps') {
       return <Apps/>;
     }
   }
@@ -32,7 +32,7 @@ const App = () => {
   });
 
   return (
-    <div style={{height:'100%'}}>
+    <div>
       <Navbar activeItem={activeItem} setActiveItem={setActiveItem}/>
       {selectContent(activeItem)}
     </div>

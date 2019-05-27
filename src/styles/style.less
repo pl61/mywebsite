@@ -10,11 +10,18 @@
 
 // mixins
 
+.shadow {
+  box-shadow: 1rem 1rem rgba(0,0,0,0.5);
+  border: 1px solid @border;
+}
+
 .transition {
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  @fast: 0.3s;
+
+  -webkit-transition: @fast;
+  -moz-transition:@fast;
+  -o-transition: @fast;
+  transition: @fast;
 }
 
 .nav-item-shared {
@@ -25,6 +32,18 @@
   width: 4.5rem;
   padding: 1rem 2rem;
   box-sizing: content-box;
+}
+
+.content {
+  border-top: 2px solid @text;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.responsive-640 {
+  @media (min-width: 640px) {
+    display: flex;
+  }
 }
 
 // styles
@@ -40,13 +59,13 @@ body {
   display: flex;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: square;
+  padding: 0 0 1rem 2rem;
   margin: 0;
 }
 
@@ -56,33 +75,30 @@ img {
 }
 
 #app {
+  .shadow();
+
   color: @text;
   background-color: @background;
-  border: 1px solid @border;
-  box-shadow: 1rem 1rem rgba(0,0,0,0.5);
   padding: 1rem;
-  margin: 1rem;
-  width: 768px;
+  margin: 1rem auto 2rem auto;
+  width: 300px;
+  height: fit-content;
+  min-height: 480px;
 
-  @media (min-width: 800px) {
-    margin-left: auto;
-    margin-right: auto;
+  @media (min-width: 450px) {
+    width: 420px;
   }
 
-  @media (min-height: 800px) {
-    margin-top: auto;
-    margin-bottom: auto;
+  @media (min-width: 640px) {
+    margin: auto;
+    width: 610px;
   }
 }
 
 .nav-bar {
   font-weight: 600;
-  padding: 0;
+  padding: 0 1rem;
   white-space: nowrap;
-
-  @media (min-width: 375px) {
-    padding: 0 1rem;
-  }
 }
 
 .nav-item {
@@ -104,28 +120,54 @@ img {
   background-color: @text;
 }
 
-.content {
-  .transition();
-
-  border-top: 2px solid @text;
-  padding: 2rem 1rem;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
 .feature {
   .transition();
 
-  border: 1px solid @border;
+  white-space: nowrap;
   opacity: 0;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
   width: fit-content;
-  box-shadow: 1rem 1rem rgba(0,0,0,0.5);
+  height: fit-content;
+  min-width: 150px;
   background-color: @feature;
 }
 
 .load {
   opacity: 1;
+}
+
+.about {
+  .content();
+  display: block
+}
+
+.skills {
+  .content();
+  .responsive-640();
+
+  @media (min-width: 450px) {
+    padding-left: 4rem;
+  }
+}
+
+.apps {
+  .content();
+
+  display: inline-block;
+  text-align: center;
+}
+
+.education {
+  .responsive-640();
+
+  p {
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+  }
+}
+
+.text-wrap {
+  max-width: 350px;
+  white-space: normal;
 }

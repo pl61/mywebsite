@@ -2,10 +2,9 @@ import React from 'react';
 
 const Apps = () => {
   return (
-    <div className="content">
+    <div className="apps">
       <div className="feature">
-        <h3>Laiden</h3>
-        <h5>Vertical Scrolling Shooter</h5>
+        <h3>Coming Soon<sup>TM</sup></h3>
       </div>
     </div>
   );
